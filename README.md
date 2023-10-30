@@ -33,3 +33,4 @@ I'm Mohit Maurya and I'm Learning Python Developer
     </a>
 </p>
 <a href="https://github.com/ItzYourHacker/github-readme-activity-graph"><img alt="Hacker's Activity Graph" src="https://activity-graph.herokuapp.com/graph?username=ItzYourHacker&bg_color=0D1117&color=5BCDEC&line=5BCDEC&point=FFFFFF&hide_border=true" /></a>
+[![Discord Presence](https://lanyard-profile-readme.vercel.app/api/289100850285117460?theme=light&bg=809ecf&animated=false&hideDiscrim=true&borderRadius=30px&idleMessage=Probably%20doing%20something%20else...)](https://discord.com/users/289100850285117460)
