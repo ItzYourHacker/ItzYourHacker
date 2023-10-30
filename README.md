@@ -4,7 +4,7 @@
 
 
 I'm Mohit Maurya and I'm Learning Python Developer
-
+[![Discord Presence](https://lanyard.cnrad.dev/api/289100850285117460)](https://discord.com/users/289100850285117460)
 
 
 
@@ -32,8 +32,4 @@ I'm Mohit Maurya and I'm Learning Python Developer
         <img title="🔥 Get streak stats for your profile at git.io/streak-stats" alt="Hacker's Streak" src="https://github-readme-streak-stats.herokuapp.com/?user=ItzYourHacker&theme=black-ice&hide_border=true&stroke=0000&background=060A0CD0"/>
     </a>
 </p>
-<div align="center">
-  <a href="https://discord.com/users/1022807635818455040">
-    <img src="https://lanyard.cnrad.dev/api/1022807635818455040" alt="Discord Presence" />
-  </a>
-</div>
+
