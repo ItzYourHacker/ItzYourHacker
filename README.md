@@ -10,8 +10,8 @@ I'm Mohit Maurya and I'm Learning Python Developer
 
 
 
-- Discord - [~ Hacker_xD#0007](https://discord.com/users/143853929531179008)
-- Instagram - [itzyourhacker](https://instagram.com/itzyourhacker)
+- Discord - [itzyourhacker](https://discord.com/users/289100850285117460)
+- Instagram - [not_her.hacker](https://instagram.com/not_her.hacker)
 
 
 
