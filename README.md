@@ -1,6 +1,8 @@
 
 [![Discord Presence](https://lanyard.cnrad.dev/api/289100850285117460)](https://discord.com/users/289100850285117460)
 
+## Visitors
+![~ Hacker_xD#0007](https://profile-counter.glitch.me/ItzYourHacker/count.svg)
 
 ## 🌐 Socials:
 [![Discord](https://img.shields.io/badge/Discord-%237289DA.svg?logo=discord&logoColor=white)](https://discord.gg/https://discord.gg/g2C4jQq4en) 
@@ -20,4 +22,7 @@
 
 ---
 [![](https://visitcount.itsvg.in/api?id=Itzyourhacker&icon=0&color=0)](https://visitcount.itsvg.in)
+
+
+
 
