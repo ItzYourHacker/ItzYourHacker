@@ -21,7 +21,7 @@
 ![](https://github-contributor-stats.vercel.app/api?username=Itzyourhacker&limit=5&theme=dark&combine_all_yearly_contributions=true)
 
 ---
-[![](https://visitcount.itsvg.in/api?id=Itzyourhacker&icon=0&color=0)](https://visitcount.itsvg.in)
+[![]([https://visitcount.itsvg.in/api?id=Itzyourhacker&icon=0&color=0)](https://visitcount.itsvg.in](https://profile-counter.glitch.me/ItzYourHacker/count.svg)https://profile-counter.glitch.me/ItzYourHacker/count.svg)
 
 
 
