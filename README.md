@@ -81,12 +81,12 @@ Lightning-fast solves with **95%+ success rate** and anti-detection.
 
 <div align="center">
 
-<img src="https://github-readme-stats.vercel.app/api?username=Itzyourhacker&theme=tokyonight&hide_border=true&include_all_commits=true&count_private=true" alt="GitHub Stats" height="180"/>
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Itzyourhacker&theme=tokyonight&hide_border=true&layout=compact&count_private=true" alt="Top Languages" height="180"/>
+<img src="https://github-readme-stats-sigma-five.vercel.app/api?username=ItzYourHacker&theme=tokyonight&hide_border=true&include_all_commits=true&count_private=true" alt="GitHub Stats" height="180"/>
+<img src="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=ItzYourHacker&theme=tokyonight&hide_border=true&layout=compact&count_private=true" alt="Top Languages" height="180"/>
 
 <br/>
 
-[![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=Itzyourhacker&theme=tokyonight&hide_border=true)](https://github.com/ItzYourHacker)
+[![GitHub Streak](https://streak-stats.demolab.com/?user=ItzYourHacker&theme=tokyonight&hide_border=true)](https://github.com/ItzYourHacker)
 
 </div>
 
@@ -96,7 +96,7 @@ Lightning-fast solves with **95%+ success rate** and anti-detection.
 
 <div align="center">
 
-![](https://github-profile-trophy.vercel.app/?username=Itzyourhacker&theme=tokyonight&no-frame=true&no-bg=true&margin-w=10&column=7)
+![](https://github-profile-trophy-rust.vercel.app/?username=ItzYourHacker&theme=tokyonight&no-frame=true&no-bg=true&margin-w=10&column=7)
 
 </div>
 
