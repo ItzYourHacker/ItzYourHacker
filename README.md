@@ -1,7 +1,7 @@
 
 <div align="center">
 
-[![Discord Presence](https://lanyard.cnrad.dev/api/272096794031292416)](https://discord.com/users/272096794031292416)
+[![Discord Presence](https://lanyard.cnrad.dev/api/148293714010177536)](https://discord.com/users/148293714010177536)
 
 # Hey, I'm Kumar Manas
 
@@ -9,7 +9,7 @@
 
 I build automation tools, Discord bots, and backend systems that are fast, scalable, and efficient.
 
-[![Portfolio](https://img.shields.io/badge/Portfolio-me.kryptonbot.in-blueviolet?style=for-the-badge&logo=googlechrome&logoColor=white)](https://me.kryptonbot.in/)
+[![Portfolio](https://img.shields.io/badge/Portfolio-notherhacker.space-blueviolet?style=for-the-badge&logo=googlechrome&logoColor=white)](https://notherhacker.space/)
 [![Discord](https://img.shields.io/badge/Discord-Join%20Server-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/g2C4jQq4en)
 [![GitHub](https://img.shields.io/badge/GitHub-ItzYourHacker-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/ItzYourHacker)
 
@@ -118,7 +118,7 @@ Lightning-fast solves with **95%+ success rate** and anti-detection.
 
 If you're into automation, bots, or just want to chat — feel free to reach out!
 
-[![Portfolio](https://img.shields.io/badge/me.kryptonbot.in-blueviolet?style=flat-square&logo=googlechrome&logoColor=white)](https://me.kryptonbot.in/)
+[![Portfolio](https://img.shields.io/badge/notherhacker.space-blueviolet?style=flat-square&logo=googlechrome&logoColor=white)](https://notherhacker.space/)
 [![Discord](https://img.shields.io/badge/Discord-5865F2?style=flat-square&logo=discord&logoColor=white)](https://discord.com/users/272096794031292416)
 [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/ItzYourHacker)
 
