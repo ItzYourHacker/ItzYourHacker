@@ -6,7 +6,7 @@
 
 I'm Kumar Manas, a backend developer from India. I build automation tools, Discord bots, and backend systems that are fast, scalable, and efficient.
 
-Most of my time goes into **[Krypton](https://www.kryptonbot.in/)**, an all-in-one Discord security bot I develop that protects **50K+ servers** and **12M+ users**, and **[Melodius](https://www.melodius.in/)**, a free music streaming platform. *If it's repetitive, it's automated.*
+Most of my time goes into **[Krypton](https://www.kryptonbot.in/)**, an all-in-one Discord security bot I develop that protects **50K+ servers** and **12M+ users**, and **[Melodius](https://www.melodius.in/)**, a free, ad-free music streaming platform on web, Android, and Windows. *If it's repetitive, it's automated.*
 
 <p align="center">
   <a href="https://www.notherhacker.space/"><b>Portfolio</b></a>&nbsp;&nbsp;·&nbsp;&nbsp;
@@ -35,43 +35,31 @@ Most of my time goes into **[Krypton](https://www.kryptonbot.in/)**, an all-in-o
   <a href="https://discord.gg/AruJRBwfAu">Support server</a>
 </p>
 
-<table>
-<tr>
-<td width="50%" valign="top">
+<p>
+  <a href="https://www.melodius.in/">
+    <img src="assets/melodius.svg" width="100%" alt="Melodius — free, ad-free music streaming with live Jams, Smart Shuffle, Blends and Music DNA, on web, Android and Windows" />
+  </a>
+</p>
 
-### Melodius
+**Melodius** is a completely free music streaming platform: no ads and no premium tier holding features back. It pairs full-catalogue search across songs, artists, and albums with **Smart Shuffle**, which keeps re-seeding the queue from whatever is playing. **Live Jams** let friends listen together in real time with a shared queue, skip votes, and playback anchored to server time. **Blends** merge two listeners' tastes into one playlist, and **Music DNA** maps genres, listening heatmaps, top artists, and how your taste evolves. Your library, playlists, and history stay in sync across every device.
 
-A completely free music streaming platform built around discovery, with smart playlists, detailed listening analytics, and social listening.
-
-- Ad-free streaming
-- Deep listening analytics & music DNA
-- Social Jam sessions
-- Shared-taste Blends
-
-**[melodius.in →](https://www.melodius.in/)**
-
-</td>
-<td width="50%" valign="top">
+<p>
+  <a href="https://www.melodius.in/"><img src="assets/buttons/web.svg" height="52" alt="Open Melodius in your browser" /></a>
+  <a href="https://play.google.com/store/apps/details?id=in.melodius.app"><img src="assets/buttons/google-play.svg" height="52" alt="Get Melodius on Google Play" /></a>
+  <a href="https://apps.microsoft.com/detail/9p9czqb0pl21"><img src="assets/buttons/microsoft-store.svg" height="52" alt="Get Melodius from the Microsoft Store" /></a>
+</p>
 
 ### CyborG Solver
 
-High-performance **hCaptcha solving API** built for developers, with fast solves, a **95%+ success rate**, and anti-detection.
-
-- Auto-scaling workers (up to 10 threads)
-- Fresh HSW JS & human-like patterns
-- RESTful API with key auth
-- Real-time performance metrics
+High-performance **hCaptcha solving API** built for developers, with fast solves, a **95%+ success rate**, and anti-detection: auto-scaling workers (up to 10 threads), fresh HSW JS with human-like patterns, a RESTful API with key auth, and real-time performance metrics.
 
 **[cybx.space →](https://cybx.space/)**&nbsp;&nbsp;·&nbsp;&nbsp;[API docs](https://cybx.space/documentation)
-
-</td>
-</tr>
-</table>
 
 ## Engineering focus
 
 - **Distributed bots at scale:** sharded, multi-cluster Discord infrastructure handling real-time gateway events for 50K+ servers.
 - **Production APIs & workers:** REST services with key-based auth, auto-scaling worker pools, and live performance metrics.
+- **Real-time & cross-platform:** server-time-synced group listening and a library that stays in sync across web, Android, and Windows.
 - **Observability by default:** cluster health, shard latency, uptime, and command analytics surfaced on a public status page.
 - **Automation first:** bots, tooling, and integrations that take repetitive work off people's plates.
 
@@ -126,20 +114,15 @@ High-performance **hCaptcha solving API** built for developers, with fast solves
 
 ## GitHub activity
 
-<div align="center">
-
-<img height="170" alt="GitHub stats" src="https://github-readme-stats-sigma-five.vercel.app/api?username=ItzYourHacker&show_icons=true&include_all_commits=true&count_private=true&hide_border=false&border_radius=14&bg_color=0B0E14&border_color=232A36&title_color=A78BFA&text_color=C9D1D9&icon_color=2DD4BF&ring_color=7C5CFF" />
-<img height="170" alt="Top languages" src="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=ItzYourHacker&layout=compact&langs_count=8&hide_border=false&border_radius=14&bg_color=0B0E14&border_color=232A36&title_color=A78BFA&text_color=C9D1D9" />
-
-<img height="170" alt="GitHub streak" src="https://streak-stats.demolab.com/?user=ItzYourHacker&hide_border=false&border_radius=14&background=0B0E14&border=232A36&stroke=232A36&ring=7C5CFF&fire=2DD4BF&currStreakNum=F0F6FC&sideNums=F0F6FC&currStreakLabel=A78BFA&sideLabels=8B949E&dates=8B949E" />
+<p>
+  <img src="https://raw.githubusercontent.com/ItzYourHacker/ItzYourHacker/output/activity.svg" width="100%" alt="GitHub activity: contributions, streaks, stars, pull requests, and top languages" />
+</p>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/ItzYourHacker/ItzYourHacker/output/snake-dark.svg" />
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/ItzYourHacker/ItzYourHacker/output/snake-light.svg" />
   <img width="100%" alt="Contribution activity snake" src="https://raw.githubusercontent.com/ItzYourHacker/ItzYourHacker/output/snake-dark.svg" />
 </picture>
-
-</div>
 
 ## Let's connect
 

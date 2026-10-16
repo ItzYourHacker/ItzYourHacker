@@ -3,9 +3,6 @@
   <desc id="desc">50K+ Discord servers, 12M+ users, 400+ commands across 20 modules. Anti-nuke, anti-raid, automod, tickets, music, giveaways, logging and welcomer.</desc>
   <style>
     .sans{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Noto Sans',Helvetica,Arial,sans-serif}
-    .rise{animation:rise .9s cubic-bezier(.2,.7,.2,1) both}
-    .d1{animation-delay:.1s}.d2{animation-delay:.3s}.d3{animation-delay:.42s}.d4{animation-delay:.54s}.d5{animation-delay:.66s}.d6{animation-delay:.85s}
-    @keyframes rise{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
     .sweep{animation:sweep 8s linear infinite}
     @keyframes sweep{to{stroke-dashoffset:-100}}
     .scan{animation:scan 2.8s ease-in-out infinite}
@@ -41,7 +38,7 @@
   <rect class="sweep" x="1" y="1" width="898" height="318" rx="19" fill="none" stroke="#00E68A" stroke-opacity=".75" stroke-width="1.5" pathLength="100" stroke-dasharray="7 93"/>
 
   <g class="sans">
-    <g class="rise d1">
+    <g>
       <g transform="translate(56 42)">
         <path d="M22 0 44 8v17c0 13.5-9.4 22.6-22 26C9.4 47.6 0 38.5 0 25V8Z" fill="url(#shield)" stroke="#00E68A" stroke-width="1.6" stroke-linejoin="round"/>
         <path d="m13.5 25.5 6 6 11.5-12.5" fill="none" stroke="#00E68A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
@@ -60,24 +57,24 @@
     <path d="M56 124H844" stroke="#1C2230"/>
     <path d="M250 150v66M450 150v66M650 150v66" stroke="#1C2230"/>
 
-    <g class="rise d2">
+    <g>
       <text x="56" y="190" font-size="46" font-weight="700" fill="#F0F6FC">50K<tspan fill="#00E68A">+</tspan></text>
       <text x="58" y="218" font-size="12" font-weight="600" letter-spacing="2" fill="#8B949E">DISCORD SERVERS</text>
     </g>
-    <g class="rise d3">
+    <g>
       <text x="276" y="190" font-size="46" font-weight="700" fill="#F0F6FC">12M<tspan fill="#00E68A">+</tspan></text>
       <text x="278" y="218" font-size="12" font-weight="600" letter-spacing="2" fill="#8B949E">USERS</text>
     </g>
-    <g class="rise d4">
+    <g>
       <text x="476" y="190" font-size="46" font-weight="700" fill="#F0F6FC">400<tspan fill="#00E68A">+</tspan></text>
       <text x="478" y="218" font-size="12" font-weight="600" letter-spacing="2" fill="#8B949E">COMMANDS</text>
     </g>
-    <g class="rise d5">
+    <g>
       <text x="676" y="190" font-size="46" font-weight="700" fill="#F0F6FC">20</text>
       <text x="678" y="218" font-size="12" font-weight="600" letter-spacing="2" fill="#8B949E">MODULES</text>
     </g>
 
-    <g class="rise d6" font-size="13" fill="#C9D1D9" text-anchor="middle">
+    <g font-size="13" fill="#C9D1D9" text-anchor="middle">
       <rect x="56" y="250" width="97" height="30" rx="15" fill="#11161F" stroke="#232A36"/><text x="104.5" y="269.5">Anti-Nuke</text>
       <rect x="163" y="250" width="97" height="30" rx="15" fill="#11161F" stroke="#232A36"/><text x="211.5" y="269.5">Anti-Raid</text>
       <rect x="270" y="250" width="82" height="30" rx="15" fill="#11161F" stroke="#232A36"/><text x="311" y="269.5">AutoMod</text>
