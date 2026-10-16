@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="14" viewBox="0 0 900 14" role="presentation">
+  <style>
+    .beam{animation:beam 6s cubic-bezier(.45,0,.55,1) infinite}
+    @keyframes beam{from{transform:translateX(-220px)}to{transform:translateX(900px)}}
+    @media (prefers-reduced-motion:reduce){.beam{animation:none;display:none}}
+  </style>
+  <defs>
+    <linearGradient id="line" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#7C5CFF" stop-opacity="0"/>
+      <stop offset=".3" stop-color="#7C5CFF" stop-opacity=".55"/>
+      <stop offset=".7" stop-color="#2DD4BF" stop-opacity=".55"/>
+      <stop offset="1" stop-color="#2DD4BF" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="glint" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#fff" stop-opacity="0"/>
+      <stop offset=".5" stop-color="#E9E3FF"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+    <clipPath id="track"><rect x="0" y="5" width="900" height="4" rx="2"/></clipPath>
+  </defs>
+  <rect x="0" y="6.25" width="900" height="1.5" rx=".75" fill="url(#line)"/>
+  <g clip-path="url(#track)">
+    <rect class="beam" x="0" y="6" width="220" height="2" rx="1" fill="url(#glint)"/>
+  </g>
+  <circle cx="450" cy="7" r="2.5" fill="#A78BFA"/>
+</svg>
