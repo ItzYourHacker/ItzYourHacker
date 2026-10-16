@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="900" height="320" viewBox="0 0 900 320" role="img" aria-labelledby="title desc">
   <title id="title">Krypton — all-in-one Discord security bot</title>
-  <desc id="desc">50K+ Discord servers, 12M+ users, 400+ commands across 20 modules. Anti-nuke, anti-raid, automod, tickets, music, giveaways, logging and welcomer.</desc>
+  <desc id="desc">Live Discord server and user counts, 400+ commands across 20 modules. Anti-nuke, anti-raid, automod, tickets, music, giveaways, logging and welcomer.</desc>
   <style>
     .sans{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Noto Sans',Helvetica,Arial,sans-serif}
     .sweep{animation:sweep 8s linear infinite}
@@ -58,11 +58,11 @@
     <path d="M250 150v66M450 150v66M650 150v66" stroke="#1C2230"/>
 
     <g>
-      <text x="56" y="190" font-size="46" font-weight="700" fill="#F0F6FC">50K<tspan fill="#00E68A">+</tspan></text>
+      <text x="56" y="190" font-size="46" font-weight="700" fill="#F0F6FC"><tspan id="krypton-servers">50K</tspan><tspan fill="#00E68A">+</tspan></text>
       <text x="58" y="218" font-size="12" font-weight="600" letter-spacing="2" fill="#8B949E">DISCORD SERVERS</text>
     </g>
     <g>
-      <text x="276" y="190" font-size="46" font-weight="700" fill="#F0F6FC">12M<tspan fill="#00E68A">+</tspan></text>
+      <text x="276" y="190" font-size="46" font-weight="700" fill="#F0F6FC"><tspan id="krypton-users">12M</tspan><tspan fill="#00E68A">+</tspan></text>
       <text x="278" y="218" font-size="12" font-weight="600" letter-spacing="2" fill="#8B949E">USERS</text>
     </g>
     <g>

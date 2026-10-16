@@ -1,10 +1,15 @@
-import { mkdir, writeFile } from 'node:fs/promises';
+import { mkdir, readFile, writeFile } from 'node:fs/promises';
 import { dirname } from 'node:path';
 import { pathToFileURL } from 'node:url';
 
 const API = 'https://api.github.com/graphql';
+const KRYPTON_STATUS_URL = 'https://www.kryptonbot.in/api/status';
+const ACTIVITY_CARD = 'dist/activity.svg';
+const README = 'README.md';
+const LIVE_SVGS = ['assets/krypton.svg', 'assets/hero.svg'];
 const TOP_LANGUAGES = 6;
 const FALLBACK_COLOR = '#8B949E';
+const USER_AGENT = 'profile-generator';
 
 const REPOS_QUERY = `query($login: String!, $cursor: String) {
   user(login: $login) {
@@ -39,7 +44,7 @@ async function graphql(token, query, variables) {
     headers: {
       Authorization: `bearer ${token}`,
       'Content-Type': 'application/json',
-      'User-Agent': 'profile-activity-card',
+      'User-Agent': USER_AGENT,
     },
     body: JSON.stringify({ query, variables }),
   });
@@ -73,6 +78,24 @@ async function fetchContributionDays(token, login, createdAt, now) {
     }
   }
   return [...days].sort(([a], [b]) => a.localeCompare(b)).map(([date, count]) => ({ date, count }));
+}
+
+async function fetchKryptonStats() {
+  try {
+    const res = await fetch(KRYPTON_STATUS_URL, {
+      headers: { Accept: 'application/json', 'User-Agent': USER_AGENT },
+      signal: AbortSignal.timeout(30_000),
+    });
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    const body = await res.json();
+    const servers = Number(body.total_guilds);
+    const users = Number(body.total_users);
+    if (body.ok !== true || !(servers >= 1000) || !(users >= servers)) throw new Error('unexpected payload');
+    return { servers, users };
+  } catch (err) {
+    console.warn(`Keeping current Krypton stats: ${err.message}`);
+    return null;
+  }
 }
 
 export function summarize({ createdAt, pullRequests, repos }, days, now) {
@@ -134,6 +157,37 @@ const formatNumber = (n) =>
     ? new Intl.NumberFormat('en', { notation: 'compact', maximumFractionDigits: 1 }).format(n)
     : n.toLocaleString('en-US');
 
+export function formatFloor(n) {
+  if (n >= 1e6) return `${Math.floor(n / 1e5) / 10}M`;
+  if (n >= 1e3) return `${Math.floor(n / 1e3)}K`;
+  return String(n);
+}
+
+export function replaceSection(text, name, content) {
+  const pattern = new RegExp(`(<!-- ${name} -->)[\\s\\S]*?(<!-- /${name} -->)`, 'g');
+  return text.replace(pattern, (_, open, close) => `${open}${content}${close}`);
+}
+
+export function setSvgText(svg, id, value) {
+  const pattern = new RegExp(`(<tspan id="${id}">)[^<]*(</tspan>)`, 'g');
+  return svg.replace(pattern, (_, open, close) => `${open}${escapeXml(value)}${close}`);
+}
+
+export function activitySection(repository) {
+  const base = `https://raw.githubusercontent.com/${repository}/output`;
+  return `
+<p>
+  <img src="${base}/activity.svg" width="100%" alt="GitHub activity: contributions, streaks, stars, pull requests, and top languages" />
+</p>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="${base}/snake-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="${base}/snake-light.svg" />
+  <img width="100%" alt="Contribution activity snake" src="${base}/snake-dark.svg" />
+</picture>
+`;
+}
+
 function formatRange({ start, end }) {
   if (!start) return 'No active streak';
   const fmt = (iso, withYear) =>
@@ -160,7 +214,7 @@ function tile({ x, y, value, unit, label, sub }) {
 const dayUnit = (n) => (n === 1 ? 'day' : 'days');
 const days = (n) => `${n} ${dayUnit(n)}`;
 
-export function render(stats) {
+export function renderActivityCard(stats) {
   const tiles = [
     { value: formatNumber(stats.total), label: 'CONTRIBUTIONS', sub: `Since ${stats.since}` },
     { value: String(stats.current.length), unit: dayUnit(stats.current.length), label: 'CURRENT STREAK', sub: formatRange(stats.current) },
@@ -219,19 +273,35 @@ export function render(stats) {
 }
 
 async function main() {
-  const [output = 'dist/activity.svg'] = process.argv.slice(2);
   const token = process.env.GITHUB_TOKEN;
   const login = process.env.GITHUB_USER ?? process.env.GITHUB_REPOSITORY_OWNER;
-  if (!token || !login) throw new Error('GITHUB_TOKEN and GITHUB_USER (or GITHUB_REPOSITORY_OWNER) are required');
+  const repository = process.env.GITHUB_REPOSITORY;
+  if (!token || !login || !repository) {
+    throw new Error('GITHUB_TOKEN, GITHUB_USER (or GITHUB_REPOSITORY_OWNER) and GITHUB_REPOSITORY are required');
+  }
 
   const now = new Date();
   const profile = await fetchRepositories(token, login);
-  const days = await fetchContributionDays(token, login, profile.createdAt, now);
-  const svg = render(summarize(profile, days, now));
+  const calendar = await fetchContributionDays(token, login, profile.createdAt, now);
+  await mkdir(dirname(ACTIVITY_CARD), { recursive: true });
+  await writeFile(ACTIVITY_CARD, renderActivityCard(summarize(profile, calendar, now)));
+  console.log(`Wrote ${ACTIVITY_CARD}`);
 
-  await mkdir(dirname(output), { recursive: true });
-  await writeFile(output, svg);
-  console.log(`Wrote ${output}`);
+  let readme = replaceSection(await readFile(README, 'utf8'), 'profile:activity', activitySection(repository));
+
+  const krypton = await fetchKryptonStats();
+  if (krypton) {
+    const servers = formatFloor(krypton.servers);
+    const users = formatFloor(krypton.users);
+    readme = replaceSection(replaceSection(readme, 'krypton:servers', `${servers}+`), 'krypton:users', `${users}+`);
+    for (const file of LIVE_SVGS) {
+      const svg = await readFile(file, 'utf8');
+      await writeFile(file, setSvgText(setSvgText(svg, 'krypton-servers', servers), 'krypton-users', users));
+    }
+    console.log(`Krypton: ${krypton.servers} servers, ${krypton.users} users`);
+  }
+
+  await writeFile(README, readme);
 }
 
 if (import.meta.url === pathToFileURL(process.argv[1]).href) {

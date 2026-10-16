@@ -13,7 +13,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: profile-assets
+  group: profile-assets-${{ github.event_name == 'pull_request' && github.head_ref || 'main' }}
   cancel-in-progress: true
 
 jobs:
@@ -27,8 +27,8 @@ jobs:
         with:
           node-version: 22
 
-      - name: Generate activity card
-        run: node .github/scripts/activity.mjs dist/activity.svg
+      - name: Generate activity card and live README sections
+        run: node .github/scripts/profile.mjs
         env:
           GITHUB_TOKEN: ${{ secrets.STATS_TOKEN || secrets.GITHUB_TOKEN }}
           GITHUB_USER: ${{ github.repository_owner }}
@@ -42,7 +42,7 @@ jobs:
             dist/snake-light.svg?color_snake=#7C5CFF&color_dots=#EBEDF0,#DDD6FE,#C4B5FD,#A78BFA,#7C5CFF
 
       - name: Publish to output branch
-        if: github.event_name != 'pull_request' || github.event.pull_request.head.repo.full_name == github.repository
+        if: github.event_name != 'pull_request'
         uses: crazy-max/ghaction-github-pages@v4
         with:
           target_branch: output
@@ -51,3 +51,17 @@ jobs:
           keep_history: false
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Commit README updates
+        if: github.event_name != 'pull_request'
+        run: |
+          git add README.md assets/krypton.svg assets/hero.svg
+          if git diff --cached --quiet; then
+            echo "README already up to date"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "chore: refresh profile README"
+          git pull --rebase origin main
+          git push origin HEAD:main

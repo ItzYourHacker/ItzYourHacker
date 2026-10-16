@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="900" height="300" viewBox="0 0 900 300" role="img" aria-labelledby="title desc">
   <title id="title">Kumar Manas — Backend Developer · Automation Enthusiast</title>
-  <desc id="desc">Building Krypton, a Discord security bot for 50K+ servers, and Melodius, a free music streaming platform.</desc>
+  <desc id="desc">Building Krypton, an all-in-one Discord security bot, and Melodius, a free music streaming platform on web, Android and Windows.</desc>
   <style>
     .sans{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Noto Sans',Helvetica,Arial,sans-serif}
     .mono{font-family:ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace}
@@ -93,7 +93,7 @@
     </g>
 
     <g class="mono" font-size="16" fill="#C9D1D9">
-      <text class="line first" x="56" y="254"><tspan fill="#2DD4BF">$</tspan> building Krypton — security for 50K+ Discord servers<tspan class="caret" fill="#A78BFA">▌</tspan></text>
+      <text class="line first" x="56" y="254"><tspan fill="#2DD4BF">$</tspan> building Krypton — security for <tspan id="krypton-servers">50K</tspan>+ Discord servers<tspan class="caret" fill="#A78BFA">▌</tspan></text>
       <text class="line second" x="56" y="254"><tspan fill="#2DD4BF">$</tspan> shipping Melodius — free, ad-free music streaming<tspan class="caret" fill="#A78BFA">▌</tspan></text>
       <text class="line third" x="56" y="254"><tspan fill="#2DD4BF">$</tspan> if it’s repetitive, it’s automated.<tspan class="caret" fill="#A78BFA">▌</tspan></text>
     </g>
